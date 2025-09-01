@@ -23,6 +23,8 @@ scoreboard players set @a Molehunt 0
 
 gamemode survival @a
 
+function molehunt:close_portal
+
 scoreboard objectives add Molehunt trigger
 scoreboard players set start Molehunt 0
 
