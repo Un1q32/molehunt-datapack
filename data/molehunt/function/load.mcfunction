@@ -16,7 +16,7 @@ scoreboard objectives add Timer dummy
 scoreboard players set ticks Timer 0
 scoreboard players set seconds Timer 0
 scoreboard players set minutes Timer 30
-scoreboard players set hours Timer 1
+scoreboard players set hours Timer 0
 
 scoreboard players set @a Deaths 0
 scoreboard players set @a Molehunt 0

@@ -28,6 +28,8 @@ title @a[tag=inno] actionbar [{"score":{"name":"hours2","objective":"Timer"},"co
 
 title @a[team=spec] actionbar [{"score":{"name":"hours2","objective":"Timer"},"color":"gray"},{"score":{"name":"hours","objective":"Timer"},"color":"gray"},":",{"score":{"name":"minutes2","objective":"Timer"},"color":"gray"},{"score":{"name":"minutes","objective":"Timer"},"color":"gray"},":",{"score":{"name":"seconds2","objective":"Timer"},"color":"gray"},{"score":{"name":"seconds","objective":"Timer"},"color":"gray"}]
 
-execute if score seconds Timer matches ..0 if score minutes Timer matches ..0 if score hours Timer matches ..0 run function molehunt:end
+execute if score seconds Timer matches ..0 if score minutes Timer matches ..0 if score hours Timer matches ..0 run function molehunt:open_portal
+
+execute if entity @a[advancements={minecraft:end/kill_dragon=true}] run molehunt:end
 
 execute if score Innocents Alive matches 0 run function molehunt:end
