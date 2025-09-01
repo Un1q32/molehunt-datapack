@@ -2,10 +2,6 @@ tellraw @s {text:"[Configure Time]",color:"green",click_event:{"action":"run_com
 
 tellraw @s ""
 
-tellraw @s {text:"[Configure Moles]",color:"yellow",click_event:{"action":"run_command","command":"/trigger MoleSettingsDisplay set 1"}}
-
-tellraw @s ""
-
 tellraw @s {text:"[Configure Border]",color:"red",click_event:{"action":"run_command","command":"/trigger BorderSettingsDisplay set 1"}}
 
 tellraw @s ""

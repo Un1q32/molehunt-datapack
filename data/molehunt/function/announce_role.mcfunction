@@ -14,7 +14,6 @@ execute as @a run trigger Border set 0
 
 execute as @a run trigger MainSettingsDisplay set 0
 execute as @a run trigger TimeSettingsDisplay set 0
-execute as @a run trigger MoleSettingsDisplay set 0
 execute as @a run trigger BorderSettingsDisplay set 0
 
 execute as @a run trigger Molehunt set 0

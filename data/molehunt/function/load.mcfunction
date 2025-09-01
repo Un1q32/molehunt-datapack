@@ -28,7 +28,6 @@ scoreboard players set start Molehunt 0
 
 scoreboard objectives add MainSettingsDisplay trigger
 scoreboard objectives add TimeSettingsDisplay trigger
-scoreboard objectives add MoleSettingsDisplay trigger
 scoreboard objectives add BorderSettingsDisplay trigger
 
 scoreboard objectives add Border trigger

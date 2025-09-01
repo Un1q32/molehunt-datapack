@@ -28,7 +28,6 @@ scoreboard objectives remove Border
 
 scoreboard objectives remove MainSettingsDisplay
 scoreboard objectives remove TimeSettingsDisplay
-scoreboard objectives remove MoleSettingsDisplay
 scoreboard objectives remove BorderSettingsDisplay
 
 scoreboard objectives add Restart trigger
