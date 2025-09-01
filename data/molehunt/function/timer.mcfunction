@@ -30,6 +30,6 @@ title @a[team=spec] actionbar [{"score":{"name":"hours2","objective":"Timer"},"c
 
 execute if score seconds Timer matches ..0 if score minutes Timer matches ..0 if score hours Timer matches ..0 run function molehunt:open_portal
 
-execute if entity @a[advancements={minecraft:end/kill_dragon=true}] run molehunt:end
+execute if entity @a[advancements={minecraft:end/kill_dragon=true}] run function molehunt:end
 
 execute if score Innocents Alive matches 0 run function molehunt:end
