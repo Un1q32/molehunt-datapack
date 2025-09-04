@@ -8,6 +8,7 @@ time set day
 
 gamerule announceAdvancements false
 gamerule showDeathMessages false
+gamerule locatorBar false
 
 execute store result score Total MoleFrequency run list
 scoreboard players operation Moles MoleFrequency = Total MoleFrequency

@@ -1,1 +1,1 @@
-setblock 0 87 0 minecraft:bedrock
+setblock 0 100 0 minecraft:bedrock

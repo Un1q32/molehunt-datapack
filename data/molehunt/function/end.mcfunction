@@ -18,6 +18,7 @@ worldborder set 59999968
 
 gamerule announceAdvancements true
 gamerule showDeathMessages true
+gamerule locatorBar true
 
 scoreboard objectives remove HourSettings
 scoreboard objectives remove MinuteSettings
