@@ -21,3 +21,4 @@ function molehunt:choose_moles
 team modify alive nametagVisibility never
 title @a title {text:"You are...",color:"yellow",bold:true}
 schedule function molehunt:announce_role 3s
+schedule function molehunt:open_portal 1800s
