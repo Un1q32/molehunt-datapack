@@ -24,23 +24,13 @@ gamemode survival @a
 
 function molehunt:close_portal
 
-scoreboard objectives add Molehunt trigger
-scoreboard players set start Molehunt 0
-
-scoreboard objectives add MainSettingsDisplay trigger
-scoreboard objectives add TimeSettingsDisplay trigger
-scoreboard objectives add BorderSettingsDisplay trigger
-
-scoreboard objectives add Border trigger
-scoreboard players set width Border 1000
-
-execute as @a run function molehunt:setting_options
-
-scoreboard objectives add HourSettings trigger
-scoreboard objectives add MinuteSettings trigger
+scoreboard objectives add Molehunt dummy
+scoreboard players set start Molehunt 1
 
 scoreboard objectives add MoleFrequency trigger
 scoreboard players set 1in MoleFrequency 5
+
+execute as @a run function molehunt:start_button
 
 execute if score hours Timer matches 10.. run scoreboard players reset hours2 Timer
 execute if score minutes Timer matches 10.. run scoreboard players reset minutes2 Timer
@@ -48,5 +38,3 @@ execute if score seconds Timer matches 10.. run scoreboard players reset seconds
 execute unless score hours Timer matches 10.. run scoreboard players set hours2 Timer 0
 execute unless score minutes Timer matches 10.. run scoreboard players set minutes2 Timer 0
 execute unless score seconds Timer matches 10.. run scoreboard players set seconds2 Timer 0
-
-scoreboard players set @a TimeSettingsDisplay 0
