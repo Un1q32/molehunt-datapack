@@ -30,8 +30,3 @@ scoreboard objectives remove Border
 scoreboard objectives remove MainSettingsDisplay
 scoreboard objectives remove TimeSettingsDisplay
 scoreboard objectives remove BorderSettingsDisplay
-
-scoreboard objectives add Restart trigger
-scoreboard players enable @a Restart
-
-tellraw @a {text:"[Restart]",color:"green",click_event:{"action":"run_command","command":"/trigger Restart set 1"}}

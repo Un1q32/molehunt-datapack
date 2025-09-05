@@ -50,5 +50,3 @@ execute unless score minutes Timer matches 10.. run scoreboard players set minut
 execute unless score seconds Timer matches 10.. run scoreboard players set seconds2 Timer 0
 
 scoreboard players set @a TimeSettingsDisplay 0
-
-scoreboard objectives remove Restart
