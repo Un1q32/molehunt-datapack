@@ -1,7 +1,6 @@
 team add alive
 team add spec
 
-team modify alive nametagVisibility never
 team modify spec color gray
 
 scoreboard objectives add Deaths deathCount

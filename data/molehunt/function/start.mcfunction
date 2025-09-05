@@ -18,5 +18,6 @@ execute if score 1in MoleFrequency > Total MoleFrequency run tag @a[tag=!mole,ta
 
 function molehunt:choose_moles
 
+team modify alive nametagVisibility never
 title @a title {text:"You are...",color:"yellow",bold:true}
 schedule function molehunt:announce_role 3s
