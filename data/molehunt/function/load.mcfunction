@@ -9,8 +9,6 @@ scoreboard objectives add Alive dummy
 
 team leave @a
 
-team join alive @a
-
 scoreboard objectives add Timer dummy
 scoreboard players set ticks Timer 0
 scoreboard players set seconds Timer 0

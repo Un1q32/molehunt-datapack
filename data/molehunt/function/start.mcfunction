@@ -11,6 +11,7 @@ gamerule locatorBar false
 
 function molehunt:choose_moles
 
+team join alive @a
 team modify alive nametagVisibility never
 team modify alive friendlyFire false
 title @a title {text:"You are...",color:"yellow",bold:true}
