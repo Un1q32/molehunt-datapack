@@ -15,5 +15,5 @@ team modify alive nametagVisibility never
 team modify alive friendlyFire false
 title @a title {text:"You are...",color:"yellow",bold:true}
 schedule function molehunt:announce_role 3s
-schedule function molehunt:end_grace 600s
+schedule function molehunt:end_grace 180s
 schedule function molehunt:open_portal 1800s
