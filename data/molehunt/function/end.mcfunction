@@ -22,5 +22,3 @@ gamerule locatorBar true
 
 scoreboard objectives remove HourSettings
 scoreboard objectives remove MinuteSettings
-
-scoreboard objectives remove Border

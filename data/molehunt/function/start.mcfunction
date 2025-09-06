@@ -1,7 +1,7 @@
 scoreboard players set @a Deaths 0
 scoreboard players set @a Molehunt 0
 
-function molehunt:set_border
+worldborder set 1000
 
 time set 0
 

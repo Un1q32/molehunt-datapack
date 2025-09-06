@@ -27,14 +27,10 @@ function molehunt:close_portal
 scoreboard objectives add Molehunt trigger
 scoreboard players set start Molehunt 0
 
-scoreboard objectives add Border trigger
-scoreboard players set width Border 1000
-
 scoreboard objectives add MoleCount dummy
 scoreboard players set count MoleCount 1
 
 scoreboard players enable @a MoleCount
-scoreboard players enable @a Border
 scoreboard players enable @a Molehunt
 
 execute as @a run function molehunt:start_button
