@@ -6,3 +6,5 @@ execute as @a[tag=mole] run tellraw @a[tag=mole] [{selector:"@s",color:"red"},{t
 scoreboard players set start Molehunt 1
 
 execute as @a run trigger Molehunt set 0
+
+execute as @a[tag=!mole] run attribute @s minecraft:waypoint_receive_range base set 0

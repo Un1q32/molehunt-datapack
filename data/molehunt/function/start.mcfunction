@@ -7,7 +7,7 @@ time set 0
 
 gamerule announceAdvancements false
 gamerule showDeathMessages false
-gamerule locatorBar false
+gamerule locatorBar true
 
 function molehunt:choose_moles
 
