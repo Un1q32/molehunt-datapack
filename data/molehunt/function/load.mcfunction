@@ -24,11 +24,11 @@ gamemode survival @a
 
 function molehunt:close_portal
 
-scoreboard objectives add Molehunt dummy
-scoreboard players set start Molehunt 1
+scoreboard objectives add Molehunt trigger
+scoreboard players set start Molehunt 0
 
-scoreboard objectives add MoleFrequency trigger
-scoreboard players set 1in MoleFrequency 5
+scoreboard objectives add MoleCount dummy
+scoreboard players set count MoleCount 1
 
 execute as @a run function molehunt:start_button
 
