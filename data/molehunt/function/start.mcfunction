@@ -12,6 +12,7 @@ gamerule locatorBar false
 function molehunt:choose_moles
 
 team join alive @a
+give @a minecraft:cooked_beef 64
 team modify alive nametagVisibility never
 team modify alive friendlyFire false
 title @a title {text:"You are...",color:"yellow",bold:true}
