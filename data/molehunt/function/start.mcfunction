@@ -8,6 +8,7 @@ time set 0
 gamerule announceAdvancements false
 gamerule showDeathMessages false
 gamerule locatorBar true
+execute as @a[tag=!mole] run attribute @s minecraft:waypoint_receive_range base reset
 
 function molehunt:choose_moles
 
