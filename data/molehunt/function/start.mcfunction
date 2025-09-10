@@ -4,6 +4,7 @@ scoreboard players set @a Molehunt 0
 worldborder set 1000
 
 time set 0
+clear @a
 
 gamerule announceAdvancements false
 gamerule showDeathMessages false
