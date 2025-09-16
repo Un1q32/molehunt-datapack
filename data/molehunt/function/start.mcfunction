@@ -9,6 +9,7 @@ clear @a
 gamerule announceAdvancements false
 gamerule showDeathMessages false
 gamerule locatorBar false
+gamerule doImmediateRespawn true
 
 function molehunt:choose_moles
 

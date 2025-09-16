@@ -5,4 +5,7 @@ title @a[tag=inno] title {"text":"NOT The Mole.","color":"green","bold":true}
 execute as @a[tag=mole] run tellraw @a[tag=mole] [{selector:"@s",color:"red"},{text:" is a mole."}]
 scoreboard players set start Molehunt 1
 
+scoreboard players set @a[tag=mole] Deaths 1
+
 execute as @a run trigger Molehunt set 0
+function molehunt:convert_mole_loop
