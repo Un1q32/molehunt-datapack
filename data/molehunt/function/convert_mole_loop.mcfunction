@@ -1,4 +1,6 @@
 execute as @a[scores={Deaths=1},tag=!mole] run tag @s add converting
+execute as @a[tag=mole] run tellraw @a[tag=converting] [{selector:"@s",color:"red"},{text:" is a mole."}]
+execute as @a[tag=converting] run tellraw @a[tag=mole] [{selector:"@s",color:"red"},{text:" is a mole."}]
 execute as @a[tag=converting] run tag @s add mole
 execute as @a[tag=converting] run tag @s remove inno
 execute at @a[tag=converting] run execute as @e[type=item,distance=..2] run data modify entity @s PickupDelay set value 0
