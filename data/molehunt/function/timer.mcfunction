@@ -1,4 +1,4 @@
-execute as @a[tag=inno] run execute at @s run spawnpoint
+execute as @a[tag=!mole] run execute at @s run spawnpoint
 execute as @a[nbt={active_effects:[{id:"minecraft:luck"}]}] run attribute @s minecraft:jump_strength base set 0
 execute as @a[nbt=!{active_effects:[{id:"minecraft:luck"}]}] run attribute @s minecraft:jump_strength base reset
 execute as @a[nbt={active_effects:[{id:"minecraft:luck"}]}] run attribute @s minecraft:knockback_resistance base set 1
