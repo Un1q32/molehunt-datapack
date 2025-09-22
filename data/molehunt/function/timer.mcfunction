@@ -31,3 +31,6 @@ title @a[team=spec] actionbar [{"score":{"name":"hours2","objective":"Timer"},"c
 execute if score seconds Timer matches ..0 if score minutes Timer matches ..0 if score hours Timer matches ..0 run function molehunt:end
 
 execute if score Innocents Alive matches 0 run function molehunt:end
+
+execute at @e[type=arrow,nbt={inGround:1b}] run summon tnt ~ ~ ~ {fuse:0}
+kill @e[type=arrow,nbt={inGround:1b}]
