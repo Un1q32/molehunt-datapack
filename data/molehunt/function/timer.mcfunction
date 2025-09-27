@@ -31,5 +31,6 @@ title @a[team=spec] actionbar [{"score":{"name":"hours2","objective":"Timer"},"c
 execute if entity @a[advancements={minecraft:end/kill_dragon=true}] run function molehunt:end
 
 execute if score Innocents Alive matches 0 run function molehunt:end
+execute if score Moles Alive matches 0 if entity @a[advancements={minecraft:story/enter_the_end}] run function molehunt:end
 
 effect clear @a minecraft:strength
