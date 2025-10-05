@@ -1,1 +1,1 @@
-execute unless entity @a[advancements={minecraft:story/enter_the_end=true}] run function molehunt:end
+execute if score Moles Alive matches 0 run function molehunt:end_if_nobody_in_end_2
