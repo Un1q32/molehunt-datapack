@@ -9,6 +9,8 @@ team leave @a
 team remove alive
 team remove spec
 
+execute as @a[tag=mole] run tellraw @a [{selector:"@s",color:"red"},{text:" was a mole."}]
+
 tag @a remove mole
 tag @a remove inno
 
