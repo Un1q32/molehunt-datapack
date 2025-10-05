@@ -22,4 +22,4 @@ schedule function molehunt:announce_role 3s
 schedule function molehunt:end_grace 180s
 schedule function molehunt:open_portal 3600s
 
-spreadplayers 0 0 50 300 false @a[team=alive]
+spreadplayers 0 0 25 300 false @a[team=alive]
