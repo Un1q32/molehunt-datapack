@@ -40,3 +40,9 @@ execute if score seconds Timer matches 10.. run scoreboard players reset seconds
 execute unless score hours Timer matches 10.. run scoreboard players set hours2 Timer 0
 execute unless score minutes Timer matches 10.. run scoreboard players set minutes2 Timer 0
 execute unless score seconds Timer matches 10.. run scoreboard players set seconds2 Timer 0
+
+tag @a remove converting
+execute as @a run attribute @s minecraft:movement_speed base reset
+execute as @a run attribute @s minecraft:jump_strength base reset
+execute as @a run attribute @s minecraft:block_interaction_range base reset
+execute as @a run attribute @s minecraft:entity_interaction_range base reset

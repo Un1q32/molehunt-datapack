@@ -8,4 +8,3 @@ scoreboard players set start Molehunt 1
 scoreboard players set @a[tag=mole] Deaths 1
 
 execute as @a run trigger Molehunt set 0
-function molehunt:convert_mole_loop
