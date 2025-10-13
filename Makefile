@@ -1,4 +1,4 @@
-SRCS := $(wildcard data/molehunt/function/*) $(wildcard data/minecraft/tags/function/*)
+SRCS := $(wildcard data/molehunt/function/*) $(wildcard data/respawnpoint/function/*) $(wildcard data/minecraft/tags/function/*)
 
 all: molehunt.zip
 
