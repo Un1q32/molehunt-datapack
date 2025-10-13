@@ -5,5 +5,7 @@ execute as @a[scores={infectionCount=500..}] run attribute @s minecraft:movement
 execute as @a[scores={infectionCount=500..}] run attribute @s minecraft:jump_strength base reset
 execute as @a[scores={infectionCount=500..}] run attribute @s minecraft:block_interaction_range base reset
 execute as @a[scores={infectionCount=500..}] run attribute @s minecraft:entity_interaction_range base reset
+execute as @a[scores={infectionCount=500..}] run attribute @s minecraft:water_movement_efficiency base reset
+execute as @a[scores={infectionCount=500..}] run attribute @s minecraft:knockback_resistance base reset
 
 execute as @a[scores={infectionCount=500..}] run scoreboard players reset @s infectionCount
