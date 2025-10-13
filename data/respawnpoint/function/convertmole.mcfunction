@@ -1,5 +1,5 @@
 tag @s add converting
-execute at @s run playsound minecraft:entity.zombie_villager.cure master @a ~ ~ ~
+execute at @s run playsound minecraft:entity.zombie_villager.cure master @s
 execute as @a[tag=mole] run tellraw @a[tag=converting] [{selector:"@s",color:"red"},{text:" is a mole."}]
 tellraw @a[tag=mole] [{selector:"@s",color:"red"},{text:" is now a mole."}]
 tag @s add mole
