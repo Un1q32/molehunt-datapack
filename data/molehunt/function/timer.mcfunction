@@ -32,3 +32,5 @@ execute if entity @a[advancements={minecraft:end/kill_dragon=true}] run function
 
 execute if score Innocents Alive matches 0 run function molehunt:end
 execute if score Moles Alive matches 0 run schedule function molehunt:end_if_nobody_in_end 5s
+
+effect clear @a minecraft:strength
