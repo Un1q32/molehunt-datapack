@@ -10,6 +10,6 @@
     }
   },
   "rewards": {
-    "function": "respawnpoint:respawnpoint"
+    "function": "respawnpoint:upondeath"
   }
 }

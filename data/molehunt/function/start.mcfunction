@@ -10,6 +10,7 @@ gamerule announceAdvancements false
 gamerule showDeathMessages false
 gamerule locatorBar false
 gamerule doImmediateRespawn true
+advancement revoke @s only respawnpoint:death
 
 function molehunt:choose_moles
 
@@ -20,5 +21,6 @@ team modify alive friendlyFire false
 title @a title {text:"You are...",color:"yellow",bold:true}
 schedule function molehunt:announce_role 3s
 schedule function molehunt:end_grace 180s
+schedule function molehunt:worldborder 1800s
 
 spreadplayers 0 0 25 300 false @a[team=alive]
