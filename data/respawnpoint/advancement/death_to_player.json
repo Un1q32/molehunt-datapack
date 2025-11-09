@@ -1,0 +1,15 @@
+{
+	"criteria": {
+		"KillPlayer": {
+			"trigger": "minecraft:entity_killed_player",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:player"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "respawnpoint:killed_by_player"
+	}
+}
