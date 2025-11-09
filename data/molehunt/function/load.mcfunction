@@ -8,7 +8,7 @@ scoreboard objectives add Deaths deathCount
 scoreboard objectives add Alive dummy
 
 team leave @a
-advancement revoke @s only respawnpoint:death
+advancement revoke @a only respawnpoint:death
 
 scoreboard objectives add Timer dummy
 scoreboard players set ticks Timer 0

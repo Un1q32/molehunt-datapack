@@ -10,7 +10,7 @@ gamerule announceAdvancements false
 gamerule showDeathMessages false
 gamerule locatorBar false
 gamerule doImmediateRespawn true
-advancement revoke @s only respawnpoint:death
+advancement revoke @a only respawnpoint:death
 
 function molehunt:choose_moles
 
