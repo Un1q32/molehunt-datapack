@@ -5,7 +5,7 @@ worldborder set 1000
 
 time set 0
 clear @a
-execute as @a[tag=diedToPlayer] run tag @s remove diedToPlayer
+
 gamerule announceAdvancements false
 gamerule showDeathMessages false
 gamerule locatorBar false
