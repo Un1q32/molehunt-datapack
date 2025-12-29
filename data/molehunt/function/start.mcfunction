@@ -5,6 +5,7 @@ worldborder set 1000
 
 time set 0
 clear @a
+kill @e[type=item]
 
 gamerule announceAdvancements false
 gamerule showDeathMessages false
