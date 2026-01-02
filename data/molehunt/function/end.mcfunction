@@ -14,7 +14,9 @@ tag @a remove inno
 
 gamemode survival @a
 
-worldborder set 59999968
+execute in minecraft:overworld run worldborder set 59999968
+execute in minecraft:the_nether run worldborder set 59999968
+execute in minecraft:the_end run worldborder set 59999968
 
 gamerule show_advancement_messages true
 gamerule show_death_messages true

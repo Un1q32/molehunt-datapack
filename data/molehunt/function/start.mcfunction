@@ -1,7 +1,9 @@
 scoreboard players set @a Deaths 0
 scoreboard players set @a Molehunt 0
 
-worldborder set 1000
+execute in minecraft:overworld run worldborder set 1000
+execute in minecraft:the_nether run worldborder set 1000
+execute in minecraft:the_end run worldborder set 1000
 
 time set 0
 clear @a
