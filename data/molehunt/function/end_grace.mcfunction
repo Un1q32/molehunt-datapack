@@ -1,1 +1,1 @@
-team modify alive friendlyFire true
+gamerule pvp true
