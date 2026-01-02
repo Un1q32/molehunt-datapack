@@ -18,8 +18,8 @@ gamemode survival @a
 
 worldborder set 59999968
 
-gamerule announceAdvancements true
-gamerule showDeathMessages true
+gamerule show_advancement_messages true
+gamerule show_death_messages‌ true
 
 scoreboard objectives remove HourSettings
 scoreboard objectives remove MinuteSettings

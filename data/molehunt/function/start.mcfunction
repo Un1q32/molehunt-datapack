@@ -7,10 +7,10 @@ time set 0
 clear @a
 kill @e[type=item]
 
-gamerule announceAdvancements false
-gamerule showDeathMessages false
-gamerule locatorBar true
-gamerule allowEnteringNetherUsingPortals true
+gamerule show_advancement_messages false
+gamerule show_death_messages‌ false
+gamerule locator_bar true
+gamerule allow_entering_nether_using_portals true
 gamerule pvp false
 execute as @a[tag=!mole] run attribute @s minecraft:waypoint_receive_range base reset
 
