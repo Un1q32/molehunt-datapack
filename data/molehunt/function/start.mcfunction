@@ -8,7 +8,7 @@ clear @a
 kill @e[type=item]
 
 gamerule show_advancement_messages false
-gamerule show_death_messages‌ false
+gamerule show_death_messages false
 gamerule locator_bar true
 gamerule allow_entering_nether_using_portals true
 gamerule pvp false
