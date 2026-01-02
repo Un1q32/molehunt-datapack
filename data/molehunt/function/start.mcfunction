@@ -11,7 +11,7 @@ gamerule show_death_messages false
 gamerule locator_bar true
 gamerule allow_entering_nether_using_portals false
 gamerule pvp false
-execute as @a[tag=!mole] run attribute @s minecraft:waypoint_receive_range base reset
+execute as @a run attribute @s minecraft:waypoint_receive_range base reset
 
 function molehunt:choose_moles
 
