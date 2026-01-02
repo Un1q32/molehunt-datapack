@@ -7,7 +7,7 @@ time set 0
 clear @a
 
 gamerule show_advancement_messages false
-gamerule show_death_messages‌ false
+gamerule show_death_messages false
 gamerule locator_bar false
 gamerule allow_entering_nether_using_portals false
 gamerule pvp false
