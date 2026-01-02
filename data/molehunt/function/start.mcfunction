@@ -6,11 +6,10 @@ worldborder set 1000
 time set 0
 clear @a
 
-gamerule announceAdvancements false
-gamerule showDeathMessages false
-gamerule locatorBar false
-gamerule doImmediateRespawn true
-gamerule allowEnteringNetherUsingPortals false
+gamerule show_advancement_messages false
+gamerule show_death_messages‌ false
+gamerule locator_bar false
+gamerule allow_entering_nether_using_portals false
 gamerule pvp false
 advancement revoke @a only respawnpoint:death
 
