@@ -3,6 +3,7 @@ execute as @a[tag=!mole,tag=!inno] run team join spec @s
 gamemode spectator @a[team=spec]
 tag @a[team=spec] remove inno
 tag @a[team=spec] remove mole
+execute as @a[team=spec] run attribute @s minecraft:waypoint_receive_range base reset
 execute store result score Moles Alive run tag @a[tag=mole] list
 execute store result score Innocents Alive run tag @a[tag=inno] list
 
