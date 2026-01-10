@@ -1,0 +1,4 @@
+tellraw @s [ {"text":"Moles: "}, {"selector":"@a[tag=Mole,tag=!Dead]","color":"red"}, {"text":" "}, {"selector":"@a[tag=Mole,tag=Dead]","strikethrough":true,"color":"dark_red"}, {"text":"\nSurvivors: "}, {"selector":"@a[team=Survivor,tag=!Dead]","color":"green"}, {"text":" "}, {"selector":"@a[team=Survivor,tag=Dead]","strikethrough":true,"color":"dark_green"}]
+scoreboard players reset @s PlayerList
+
+# tellraw @s [ {"text":"Moles: "}, {"selector":"@a[team=Mole,gamemode=!spectator]","color":"red"}, {"text":", "}, {"selector":"@a[team=Mole,gamemode=spectator]","strikethrough":true,"color":"red"}, {"text":"\nSurvivors: "}, {"selector":"@a[team=Survivor,gamemode=survival]","color":"green"}, {"selector":"@a[team=Survivor,gamemode=spectator]","strikethrough":true,"color":"dark_green"}, {"text":"\nDead: "}, {"selector":"@a[team=!Mole,team=!Survivor]","color":"gray"}]

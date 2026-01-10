@@ -1,44 +1,70 @@
-team add alive
-team add spec
+team add Survivor
+team modify Survivor seeFriendlyInvisibles false
+team modify Survivor deathMessageVisibility hideForOwnTeam
+team modify Survivor nametagVisibility never
 
-team modify spec color gray
+team add Mole
+team modify Mole seeFriendlyInvisibles false
+team modify Mole deathMessageVisibility hideForOtherTeams
+team modify Mole nametagVisibility never
 
+# Tags
+tag @a remove Mole
+tag @a remove Dead
+tag @a remove Survivor
+
+# Main scoreboard
+scoreboard objectives add Molehunt trigger
+
+# Molehunt Gamemode
+# 0 - Nothing
+# 1 - Normal
+# 2 - Speedrun
+# 3 - Infection
+scoreboard players enable @a Molehunt
+scoreboard players set mode Molehunt 0
+
+# Amount of moles
+scoreboard players set moles Molehunt 1
+
+# game state
+scoreboard players set playing Molehunt 0
+
+# PlayerList
+scoreboard objectives add PlayerList trigger
+
+# DeathCount
 scoreboard objectives add Deaths deathCount
+scoreboard players reset @a Deaths
 
-scoreboard objectives add Alive dummy
-
-team leave @a
+# Timer
 
 scoreboard objectives add Timer dummy
 scoreboard players set ticks Timer 0
 scoreboard players set seconds Timer 0
-scoreboard players set minutes Timer 0
+scoreboard players set minutes Timer 30
 scoreboard players set hours Timer 1
 
-scoreboard players set @a Deaths 0
-scoreboard players set @a Molehunt 0
+# other setup
+gamerule advance_time false
+weather clear
+gamerule advance_weather false
+gamerule pvp false
+gamerule spectators_generate_chunks false
+gamerule spawn_phantoms
+gamerule allow_entering_nether_using_portals true
+gamerule send_command_feedback true
+team leave @a
+gamemode creative @a[gamemode=spectator]
+execute as @a run attribute @s minecraft:waypoint_receive_range base reset
+execute as @a run attribute @s minecraft:waypoint_transmit_range base reset
 
-gamemode survival @a
+# keep track of stats (for fun)
+scoreboard objectives add Kills playerKillCount
 
-function molehunt:close_portal
+time set 0
+worldborder set 20
 
-scoreboard objectives add Molehunt trigger
-scoreboard players set start Molehunt 0
+tellraw @a {"text": "Molehunt", "color": "#7f93b9"}
 
-scoreboard objectives add MoleCount dummy
-scoreboard players set count MoleCount 1
-
-scoreboard players enable @a MoleCount
-scoreboard players enable @a Molehunt
-
-execute as @a run function molehunt:start_button
-
-scoreboard objectives add HourSettings trigger
-scoreboard objectives add MinuteSettings trigger
-
-execute if score hours Timer matches 10.. run scoreboard players reset hours2 Timer
-execute if score minutes Timer matches 10.. run scoreboard players reset minutes2 Timer
-execute if score seconds Timer matches 10.. run scoreboard players reset seconds2 Timer
-execute unless score hours Timer matches 10.. run scoreboard players set hours2 Timer 0
-execute unless score minutes Timer matches 10.. run scoreboard players set minutes2 Timer 0
-execute unless score seconds Timer matches 10.. run scoreboard players set seconds2 Timer 0
+tellraw @a ["\n",{"text":"What gamemode?","color":"white"},{"text":"\n"},{"text":"[Normal]","color":"gold","click_event":{"action":"run_command","command":"/function molehunt:setup/normal/normalsetup"}},{"text":"   "},{"text":"[Speedrun]","color":"blue","click_event":{"action":"run_command","command":"/function molehunt:setup/speedrun/speedrunsetup"}},{"text":"   "},{"text":"[Infection]","color":"green","click_event":{"action":"run_command","command":"/function molehunt:setup/infection/infectionsetup"}}]

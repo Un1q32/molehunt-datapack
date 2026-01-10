@@ -1,3 +1,7 @@
-execute if score start Molehunt matches 1 run function molehunt:timer
+# Store player and team counts
+execute store result score players Molehunt if entity @a
+execute store result score molesLeft Molehunt if entity @a[team=Mole,tag=!Dead]
+execute store result score survivorsLeft Molehunt if entity @a[team=Survivor,tag=!Dead]
 
-execute as @a if score @s Molehunt matches 1 if score start Molehunt matches 0 run function molehunt:start_delay
+# Timer
+execute if score playing Molehunt matches 1 run function molehunt:timer/timer

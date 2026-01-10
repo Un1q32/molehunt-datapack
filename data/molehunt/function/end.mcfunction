@@ -1,27 +1,24 @@
-execute if score Innocents Alive matches 1.. run title @a title {"text":"Innocents Win!","color":"green"}
-execute if score Innocents Alive matches 0 run title @a title {"text":"Moles Win!","color":"red"}
-
-scoreboard objectives remove Alive
-scoreboard objectives remove Deaths
-scoreboard objectives remove Timer
-scoreboard objectives remove Molehunt
-team leave @a
-team remove alive
-team remove spec
+execute if score survivorsLeft Molehunt matches 1.. run title @a title {"text":"Survivors Win!","color":"green"}
+execute if score survivorsLeft Molehunt matches 0 run title @a title {"text":"Moles Win!","color":"red"}
 
 execute as @a[tag=mole] run tellraw @a [{selector:"@s",color:"red"},{text:" was a mole."}]
 
-tag @a remove mole
-tag @a remove inno
+tag @a remove Mole
+tag @a remove Dead
+tag @a remove Survivor
+
+team leave @a
 
 gamemode survival @a
 
-execute in minecraft:overworld run worldborder set 59999968
-execute in minecraft:the_nether run worldborder set 59999968
-execute in minecraft:the_end run worldborder set 59999968
-
 gamerule show_advancement_messages true
-gamerule show_death_messages true
+gamerule send_command_feedback true
 
-scoreboard objectives remove HourSettings
-scoreboard objectives remove MinuteSettings
+# Clearing scheduled functions
+schedule clear molehunt:setup/teleportPlayers
+schedule clear molehunt:setup/buildup
+schedule clear molehunt:setup/announcerole
+schedule clear molehunt:setup/endgrace
+schedule clear molehunt:end
+
+scoreboard players set playing Molehunt 0
