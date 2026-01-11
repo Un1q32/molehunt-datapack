@@ -7,6 +7,7 @@ tag @a remove Dead
 execute unless score mode Molehunt matches 2 run gamerule allow_entering_nether_using_portals false
 
 # setup
+clear @a
 effect clear @a
 effect give @a minecraft:saturation 1 255
 gamerule show_advancement_messages false
