@@ -51,7 +51,7 @@ weather clear
 gamerule advance_weather false
 gamerule pvp false
 gamerule spectators_generate_chunks false
-gamerule spawn_phantoms
+gamerule spawn_phantoms false
 gamerule allow_entering_nether_using_portals true
 gamerule send_command_feedback true
 team leave @a
