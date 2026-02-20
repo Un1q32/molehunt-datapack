@@ -5,3 +5,6 @@ execute store result score survivorsLeft Molehunt if entity @a[team=Survivor,tag
 
 # Timer
 execute if score playing Molehunt matches 1 run function molehunt:timer/timer
+
+# Other gameplay features (triggerlist, effect clears, etc.)
+execute if score playing Molehunt matches 1 run function molehunt:gameplay

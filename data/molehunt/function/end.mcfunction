@@ -14,6 +14,8 @@ gamemode survival @a
 gamerule show_advancement_messages true
 gamerule send_command_feedback true
 
+scoreboard players set playing Molehunt 0
+
 # Clearing scheduled functions
 schedule clear molehunt:setup/teleportPlayers
 schedule clear molehunt:setup/buildup
@@ -21,4 +23,10 @@ schedule clear molehunt:setup/announcerole
 schedule clear molehunt:setup/endgrace
 schedule clear molehunt:end
 
-scoreboard players set playing Molehunt 0
+# Infection
+execute as @a run attribute @s minecraft:movement_speed base reset
+execute as @a run attribute @s minecraft:jump_strength base reset
+execute as @a run attribute @s minecraft:block_interaction_range base reset
+execute as @a run attribute @s minecraft:entity_interaction_range base reset
+execute as @a run attribute @s minecraft:water_movement_efficiency base reset
+execute as @a run attribute @s minecraft:knockback_resistance base reset

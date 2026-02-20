@@ -38,7 +38,7 @@ scoreboard objectives add Deaths deathCount
 scoreboard players reset @a Deaths
 
 # Timer
-
+# [1:30] default
 scoreboard objectives add Timer dummy
 scoreboard players set ticks Timer 0
 scoreboard players set seconds Timer 0
@@ -48,9 +48,8 @@ scoreboard players set hours Timer 1
 # other setup
 gamerule advance_time false
 weather clear
-gamerule advance_weather false
 gamerule pvp false
-gamerule spectators_generate_chunks false
+gamerule spectators_generate_chunks true
 gamerule spawn_phantoms false
 gamerule allow_entering_nether_using_portals true
 gamerule send_command_feedback true
@@ -58,6 +57,31 @@ team leave @a
 gamemode creative @a[gamemode=spectator]
 execute as @a run attribute @s minecraft:waypoint_receive_range base reset
 execute as @a run attribute @s minecraft:waypoint_transmit_range base reset
+
+# infection setup
+scoreboard objectives add respawn.x dummy
+scoreboard objectives add respawn.y dummy
+scoreboard objectives add respawn.z dummy
+scoreboard objectives add respawn.rot_y dummy
+scoreboard objectives add respawn.rot_x dummy
+scoreboard objectives add respawn.timestamp dummy
+scoreboard objectives add infectionCount dummy
+tag @a remove Converting
+execute as @a run attribute @s minecraft:movement_speed base reset
+execute as @a run attribute @s minecraft:jump_strength base reset
+execute as @a run attribute @s minecraft:block_interaction_range base reset
+execute as @a run attribute @s minecraft:entity_interaction_range base reset
+execute as @a run attribute @s minecraft:water_movement_efficiency base reset
+execute as @a run attribute @s minecraft:knockback_resistance base reset
+advancement revoke @s only molehunt:death
+scoreboard players reset * infectionCount
+
+# Clearing scheduled functions (sometime's these would activate on reload?????)
+schedule clear molehunt:setup/teleportPlayers
+schedule clear molehunt:setup/buildup
+schedule clear molehunt:setup/announcerole
+schedule clear molehunt:setup/endgrace
+schedule clear molehunt:end
 
 # keep track of stats (for fun)
 scoreboard objectives add Kills playerKillCount
