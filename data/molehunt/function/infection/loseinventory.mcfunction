@@ -21,7 +21,7 @@ item replace entity @e[type=minecraft:chest_minecart,tag=deathInv2,limit=1,sort=
 
 gamemode spectator @s
 tag @s add Dead
-tag @s remove Mole
+team leave @s
 clear @s
 kill @e[type=minecraft:chest_minecart,tag=deathInv1,limit=1,sort=nearest]
 kill @e[type=minecraft:chest_minecart,tag=deathInv2,limit=1,sort=nearest]
