@@ -1,8 +1,8 @@
 {
     "pack": {
         "description": "Molehunt Datapack",
-        "pack_format": 94,
-        "min_format": 93,
-        "max_format": 95
+        "pack_format": 101,
+        "min_format": 101,
+        "max_format": 101
     }
 }

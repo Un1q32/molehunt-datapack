@@ -86,7 +86,7 @@ schedule clear molehunt:end
 # keep track of stats (for fun)
 scoreboard objectives add Kills playerKillCount
 
-time set 0
+time of minecraft:overworld set 0
 worldborder set 20
 
 tellraw @a {"text": "Molehunt", "color": "#7f93b9"}
